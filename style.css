@@ -1,8 +1,145 @@
-.container {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.logo{
-    display: flex;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: skyblue;
+    padding: 15px;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) 3fr;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 250px 4fr;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.sidebar li {
+    padding: 10px;
+    font-size: 125%;
+}
+
+.sidebar li::marker {
+    font-size: 200%;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+.search img {
+    width: 30px;
+}
+
+.search .left {
+    display: grid;
+    grid-template-columns: 30px 2fr;
+    align-items: center;
+}
+
+.search .left input[type="text"] {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 0px;
+}
+
+.search .right {
+    display: grid;
+    grid-template-columns: 75px 75px 150px;
+    align-items: center;
+    justify-content: right;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.intro .left {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 25px;
+    padding: 10px;
+    justify-content: left;
+    align-items: center;
+}
+
+.intro .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.intro .right button {
+    border-radius: 10px;
+    background-color: skyblue;
+    border: 0px;
+    height: 50px;
+}
+
+.intro .left img {
+    width: 75px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr;
+    background-color: lightgray;
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.projects {
+    padding: 10px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 5px 1fr;
+    border-radius: 100px;
+    padding: 10px;
+    width: 300px;
+    filter: drop-shadow(0 5px 5px #333)
+}
+
+.bar {
+    background-color: orange;
+}
+
+.cardmain {
+    padding-left: 5px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background-color: white;
+}
+
+.footer img{
+    height: 50px;
 }
