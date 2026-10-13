@@ -114,7 +114,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 2fr 0.75fr;
+    grid-template-columns: 2fr 1fr;
     background-color: lightgray;
 }
 
