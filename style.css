@@ -125,6 +125,7 @@ body {
     grid-template-columns: 5px 1fr;
     border-radius: 100px;
     padding: 10px;
+    border: 30px;
     width: 300px;
     filter: drop-shadow(0 5px 5px #333)
 }
@@ -140,6 +141,15 @@ body {
     background-color: white;
 }
 
+.footer {
+    padding-bottom: 30px;
+    padding-right: 5px;
+    text-align: end;
+    align-content: end;
+    justify-content: space-around;
+}
+
 .footer img{
-    height: 50px;
+    height: 25px;
+    margin: 10px;
 }
