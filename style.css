@@ -1,5 +1,11 @@
+:root {
+    --card-radius: 15px;
+}
+
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -33,6 +39,7 @@ body {
 .sidebar li {
     padding: 10px;
     font-size: 125%;
+    font-weight: bold;
 }
 
 .sidebar li::marker {
@@ -73,14 +80,13 @@ body {
 .intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    margin: 10px;
 }
 
 .intro .left {
     display: grid;
     grid-template-columns: 75px 1fr;
     gap: 25px;
-    padding: 10px;
     justify-content: left;
     align-items: center;
 }
@@ -98,6 +104,8 @@ body {
     background-color: skyblue;
     border: 0px;
     height: 50px;
+    font-weight: bold;
+    font-size: larger;
 }
 
 .intro .left img {
@@ -106,14 +114,14 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 2.5fr 0.5fr;
+    grid-template-columns: 2fr 0.75fr;
     background-color: lightgray;
 }
 
 .cards {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .projects {
@@ -122,23 +130,28 @@ body {
 
 .card {
     display: grid;
-    grid-template-columns: 5px 1fr;
-    border-radius: 100px;
+    grid-template-columns: 15px 1fr;
+    border-radius: var(--card-radius);
     padding: 10px;
-    border: 30px;
-    width: 300px;
-    filter: drop-shadow(0 5px 5px #333)
+    filter: drop-shadow(0 5px 5px #333);
+    overflow: hidden;
 }
 
 .bar {
     background-color: orange;
+    border-radius: var(--card-radius) 0 0 var(--card-radius);
 }
 
 .cardmain {
-    padding-left: 5px;
+    padding: 20px;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 0.25fr;
     background-color: white;
+    border-radius: 0 var(--card-radius) var(--card-radius) 0;
+}
+
+.cardmain p {
+    color: gray;
 }
 
 .footer {
@@ -152,4 +165,42 @@ body {
 .footer img{
     height: 25px;
     margin: 10px;
+}
+
+.info {
+    margin: 20px;
+}
+
+.announcements {
+    border-radius: 15px;
+    padding: 25px;
+    background-color: white;
+}
+
+.announcements p {
+    color: grey;
+    font-size: small;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    border-radius: 15px;
+    background-color: white;
+}
+
+.topic {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    padding: 25px;
+    font-size: small;
+}
+
+.icon img {
+    width: 50px;
+}
+
+.topicdata {
+    margin-left: 15px;
 }
